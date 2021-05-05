@@ -53,6 +53,7 @@ app.post('/parse', upload.any(), async function (req, res) {
   }
   console.log(emailData)
   await emailDoc.set(emailData)
+  res.status(200).send('OK')
 })
 
 const server = app.listen(app.get('port'), function () {
