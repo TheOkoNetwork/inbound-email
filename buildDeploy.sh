@@ -1,7 +1,11 @@
 #!/bin/bash
 
-image=gcr.io/parkplanr-dev/inbound-email
+project=$1
+
+image=gcr.io/$project/inbound-email
 region=europe-north1
+
+gcloud config set project $project
 
 function deployService {
 	service=inbound-email

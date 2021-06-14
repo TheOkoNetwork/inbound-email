@@ -53,6 +53,7 @@ app.post('/parse', upload.any(), async function (req, res) {
   }
   console.log(emailData)
   await emailDoc.set(emailData)
+  console.log(`Saved as email doc: ${emailDoc.id}`)
   res.status(200).send('OK')
 })
 
