@@ -1,6 +1,6 @@
 # Use the official lightweight Node.js 12 image.
 # https://hub.docker.com/_/node
-FROM node:current-slim
+FROM node:18.1.0-slim
 
 # Create and change to the app directory.
 WORKDIR /usr/src/app
